@@ -1,0 +1,26 @@
+:root {
+    --color-primary: #6ee546;
+    --color-secondary: #4eb62b;
+
+    --color-header-bg: #077e07;
+    --color-header-text: #ffffff;
+
+    --color-btn-bg: #6ee546;
+    --color-btn-text: #000000;
+    --color-btn-bg-hover: #4eb62b;
+
+    --color-bg: #e3e3e3;
+    --color-bg-secondary: #ffffff;
+    --color-box: #fff;
+    --color-text: #000;
+    --color-text-secondary: #757575;
+
+    --border-radius: 16px;
+
+    --padding-normal: 1rem;
+    --padding-large: 24px;
+    --padding-small: 8px;
+
+    --gap: 1rem;
+    --gap-large: 2rem;
+}

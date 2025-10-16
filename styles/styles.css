@@ -1,0 +1,193 @@
+@import "variables.css";
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+html,
+body {
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+}
+
+* {
+    box-sizing: border-box;
+    transition: 0.2s background-color, 0.2s padding;
+}
+
+a {
+    color: var(--color-primary);
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+button {
+    cursor: pointer;
+    background-color: var(--color-btn-bg);
+    color: var(--color-btn-text);
+    border: none;
+    border-radius: var(--border-radius);
+    height: 50px;
+    font-size: 1rem;
+    font-weight: bold;
+
+    &:hover {
+        background-color: var(--color-btn-bg-hover);
+    }
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.header {
+    background-color: var(--color-header-bg);
+    padding: var(--padding-small);
+    color: var(--color-header-text);
+    text-align: center;
+
+    .header__branding,
+    .header__nav {
+        max-width: 1000px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .header__branding {
+        h1,
+        h2 {
+            margin: 0;
+        }
+    }
+
+    .header__nav {
+        margin: 0 auto;
+
+        .menu {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: var(--gap-large);
+
+            .menu__item {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: var(--color-primary);
+                border-radius: var(--border-radius);
+
+                &:hover {
+                    color: var(--color-header-bg);
+                    background-color: var(--color-primary);
+                }
+
+                .menu__link {
+                    color: inherit;
+                    height: 50px;
+                    text-decoration: none;
+                    display: flex;
+                    align-items: center;
+                    padding: var(--padding-small) var(--padding-normal);
+                }
+            }
+        }
+    }
+}
+
+main {
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    padding: var(--padding-large) var(--padding-normal);
+}
+
+.footer {
+    background-color: var(--color-header-bg);
+    color: var(--color-header-text);
+    text-align: center;
+    padding: var(--padding-small);
+}
+
+.info {
+    display: flex;
+    gap: var(--gap-large);
+    padding: var(--padding-normal);
+
+    .info__photo {
+        border-radius: var(--border-radius);
+        width: 200px;
+        height: 200px;
+    }
+
+    .info__content {
+        display: flex;
+        flex-direction: column;
+        gap: var(--gap);
+        flex: 1;
+
+        .info__description {
+        }
+
+        .info__resume {
+            width: fit-content;
+            padding: 0 var(--padding-normal);
+        }
+    }
+}
+
+.skills {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap);
+    text-align: center;
+
+    .skill {
+        display: flex;
+        align-items: center;
+        gap: var(--gap);
+
+        .skill__progress {
+            flex: 1;
+            height: 20px;
+            background-color: var(--color-bg-secondary);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+
+            .progress__bar {
+                background-color: var(--color-primary);
+                height: inherit;
+            }
+        }
+
+        .skill__percent {
+            font-weight: bold;
+        }
+    }
+}
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-large);
+    padding: var(--padding-normal);
+    text-align: center;
+
+    .project {
+        background-color: var(--color-bg-secondary);
+        border-radius: var(--border-radius);
+        padding: var(--padding-normal);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+        .project__title {
+            margin-top: 0;
+        }
+
+        .project__description {
+            color: var(--color-text-secondary);
+        }
+    }
+}
