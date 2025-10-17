@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+    <script src="../scripts/projects.js" defer></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__branding">
+            <h1 class="logo">Логотип</h1>
+            <h2 class="name">Рычажков Дмитрий Андреевич</h2>
+        </div>
+
+        <nav class="header__nav">
+            <ul class="menu">
+                <li class="menu__item">
+                    <a href="../index.html" class="menu__link">Главная</a>
+                </li>
+                <li class="menu__item"><a href="./projects.html" class="menu__link">Проекты</a></li>
+                <li class="menu__item"><a href="./diary.html" class="menu__link">Дневник</a></li>
+                <li class="menu__item"><a href="./contacts.html" class="menu__link">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="projects">
+            <header class="projects__header">
+                <h2 class="header__title">Лучшие проекты</h2>
+                <div class="sorting">
+                    <button class="sorting__btn" id="btnSortByAll">Все</button>
+                    <button class="sorting__btn" id="btnSortByHtml">HTML</button>
+                    <button class="sorting__btn" id="btnSortByJs">JS</button>
+                    <button class="sorting__btn" id="btnSortByReact">React</button>
+                </div>
+            </header>
+
+            <div class="projects__cards">
+                <article class="project-card" data-tag="html">
+                    <img class="project-card__image" src="../images/avatar.jpg" alt="Проект 1">
+                    <h3 class="project-card__title">Проект 1</h3>
+                    <p class="project-card__description">Описание проекта 1</p>
+                </article>
+                <article class="project-card" data-tag="js">
+                    <img class="project-card__image" src="../images/avatar.jpg" alt="Проект 1">
+                    <h3 class="project-card__title">Проект 2</h3>
+                    <p class="project-card__description">Описание проекта 2</p>
+                </article>
+                <article class="project-card" data-tag="react">
+                    <img class="project-card__image" src="../images/avatar.jpg" alt="Проект 1">
+                    <h3 class="project-card__title">Проект 3</h3>
+                    <p class="project-card__description">Описание проекта 3</p>
+                </article>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <p>&copy; 2025 <a href="./pages/contacts.html">Контакты</a></p>
+    </footer>
+</body>
+
+</html>

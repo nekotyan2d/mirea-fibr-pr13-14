@@ -20,9 +20,9 @@
                 <li class="menu__item">
                     <a href="./index.html" class="menu__link">Главная</a>
                 </li>
-                <li class="menu__item"><a href="./index.html" class="menu__link">Проекты</a></li>
-                <li class="menu__item"><a href="./index.html" class="menu__link">Дневник</a></li>
-                <li class="menu__item"><a href="./index.html" class="menu__link">Контакты</a></li>
+                <li class="menu__item"><a href="./pages/projects.html" class="menu__link">Проекты</a></li>
+                <li class="menu__item"><a href="./pages/diary.html" class="menu__link">Дневник</a></li>
+                <li class="menu__item"><a href="./pages/contacts.html" class="menu__link">Контакты</a></li>
             </ul>
         </nav>
     </header>
@@ -46,35 +46,47 @@
             <div class="skill">
                 <span>JavaScript</span>
                 <div class="skill__progress">
-                    <div class="progress__bar" style="width: 80%;"></div>
+                    <div class="progress__bar" style="width: 70%;"></div>
                 </div>
-                <div class="skill__percent">80%</div>
+                <div class="skill__percent">70%</div>
             </div>
             <div class="skill">
                 <span>Bootstrap</span>
                 <div class="skill__progress">
-                    <div class="progress__bar" style="width: 85%;"></div>
+                    <div class="progress__bar" style="width: 5%;"></div>
                 </div>
-                <div class="skill__percent">85%</div>
+                <div class="skill__percent">5%</div>
             </div>
             <div class="skill">
                 <span>React</span>
                 <div class="skill__progress">
-                    <div class="progress__bar" style="width: 60%;"></div>
+                    <div class="progress__bar" style="width: 10%;"></div>
                 </div>
-                <div class="skill__percent">60%</div>
+                <div class="skill__percent">10%</div>
             </div>
         </section>
         <div class="projects">
             <h2>Лучшие проекты</h2>
-            <div class="project">
-                <img src="" alt="Проект 1">
-                <h3>Проект 1</h3>
-                <p>Описание проекта 1</p>
+            <div class="project-cards">
+                <article class="project-card">
+                    <img class="project-card__image" src="./images/avatar.jpg" alt="Проект 1">
+                    <h3 class="project-card__title">Проект 1</h3>
+                    <p class="project-card__description">Описание проекта 1</p>
+                </article>
+                <article class="project-card">
+                    <img class="project-card__image" src="./images/avatar.jpg" alt="Проект 1">
+                    <h3 class="project-card__title">Проект 2</h3>
+                    <p class="project-card__description">Описание проекта 2</p>
+                </article>
+                <article class="project-card">
+                    <img class="project-card__image" src="./images/avatar.jpg" alt="Проект 1">
+                    <h3 class="project-card__title">Проект 3</h3>
+                    <p class="project-card__description">Описание проекта 3</p>
+                </article>
             </div>
         </div>
     </main>
-    <footer>
+    <footer class="footer">
         <p>&copy; 2025 <a href="./pages/contacts.html">Контакты</a></p>
     </footer>
 </body>
