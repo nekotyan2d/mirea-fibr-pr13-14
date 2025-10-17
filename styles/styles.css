@@ -305,6 +305,34 @@ main {
     }
 }
 
+.my-progress {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap);
+
+    .schedule {
+        display: flex;
+        flex-direction: column;
+        gap: var(--gap);
+
+        .schedule__item {
+            display: flex;
+
+            .schedule__name {
+                flex: 1;
+            }
+
+            .schedule__status {
+                border-radius: var(--border-radius);
+                color: white;
+            }
+        }
+
+        .schedule__item--completed {
+        }
+    }
+}
+
 @media screen and (max-width: 500px) {
     .header .header__nav .menu {
         flex-direction: column;
