@@ -15,6 +15,9 @@
     --color-text: #000;
     --color-text-secondary: #757575;
 
+    --color-success: #28a745;
+    --color-warning: #ffc107;
+
     --border-radius: 16px;
 
     --padding-normal: 1rem;
