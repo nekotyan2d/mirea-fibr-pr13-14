@@ -15,8 +15,11 @@
     --color-text: #000;
     --color-text-secondary: #757575;
 
+    --color-border: #dcdcdc;
+
     --color-success: #28a745;
     --color-warning: #ffc107;
+    --color-error: #dc3545;
 
     --border-radius: 16px;
 
