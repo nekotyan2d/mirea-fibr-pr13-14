@@ -6,12 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../styles/styles.css">
+    <script src="./scripts/index.js" defer></script>
 </head>
 
 <body>
     <header class="header">
         <div class="header__branding">
-            <h1 class="logo">Логотип</h1>
+            <h1 class="logo">Портфолио</h1>
             <h2 class="name">Рычажков Дмитрий Андреевич</h2>
         </div>
 
@@ -36,29 +37,23 @@
         </section>
         <section class="skills">
             <h2>Мои навыки</h2>
-            <div class="skill">
-                <span>HTML/CSS</span>
+            <div class="skills-container">
+                <span class="skill__name">HTML/CSS</span>
                 <div class="skill__progress">
                     <div class="progress__bar" style="width: 90%;"></div>
                 </div>
                 <div class="skill__percent">90%</div>
-            </div>
-            <div class="skill">
-                <span>JavaScript</span>
+                <span class="skill__name">JavaScript</span>
                 <div class="skill__progress">
                     <div class="progress__bar" style="width: 70%;"></div>
                 </div>
                 <div class="skill__percent">70%</div>
-            </div>
-            <div class="skill">
-                <span>Bootstrap</span>
+                <span class="skill__name">Bootstrap</span>
                 <div class="skill__progress">
                     <div class="progress__bar" style="width: 5%;"></div>
                 </div>
                 <div class="skill__percent">5%</div>
-            </div>
-            <div class="skill">
-                <span>React</span>
+                <span class="skill__name">React</span>
                 <div class="skill__progress">
                     <div class="progress__bar" style="width: 10%;"></div>
                 </div>
@@ -69,19 +64,20 @@
             <h2>Лучшие проекты</h2>
             <div class="projects__cards">
                 <article class="project-card">
-                    <img class="project-card__image" src="./images/avatar.jpg" alt="Проект 1">
-                    <h3 class="project-card__title">Проект 1</h3>
-                    <p class="project-card__description">Описание проекта 1</p>
+                    <img class="project-card__image" src="./images/portfolio.png" alt="Визитка">
+                    <h3 class="project-card__title">Визитка</h3>
+                    <p class="project-card__description">Личная визитка. Этот сайт</p>
                 </article>
                 <article class="project-card">
-                    <img class="project-card__image" src="./images/avatar.jpg" alt="Проект 1">
-                    <h3 class="project-card__title">Проект 2</h3>
-                    <p class="project-card__description">Описание проекта 2</p>
+                    <img class="project-card__image" src="./images/depthhunter2.png" alt="DepthHunter">
+                    <h3 class="project-card__title">Фронт DepthHunter</h3>
+                    <p class="project-card__description">Фронтенд мини-приложения в телеграм DepthHunter. Игра в стиле
+                        майнкрафт, но в 2д и в телеграме</p>
                 </article>
                 <article class="project-card">
-                    <img class="project-card__image" src="./images/avatar.jpg" alt="Проект 1">
-                    <h3 class="project-card__title">Проект 3</h3>
-                    <p class="project-card__description">Описание проекта 3</p>
+                    <img class="project-card__image" src="./images/todo1.png" alt="Priority TODO">
+                    <h3 class="project-card__title">Priority TODO</h3>
+                    <p class="project-card__description">TODO с приоритезацией задач</p>
                 </article>
             </div>
         </section>

@@ -1,14 +1,14 @@
 const btnSortByAll = document.getElementById("btnSortByAll");
 const btnSortByHtml = document.getElementById("btnSortByHtml");
 const btnSortByJs = document.getElementById("btnSortByJs");
-const btnSortByReact = document.getElementById("btnSortByReact");
+const btnSortByVue = document.getElementById("btnSortByVue");
 
 const projects = document.querySelectorAll(".project-card");
 
 btnSortByAll.addEventListener("click", () => sort("all"));
 btnSortByHtml.addEventListener("click", () => sort("html"));
 btnSortByJs.addEventListener("click", () => sort("js"));
-btnSortByReact.addEventListener("click", () => sort("react"));
+btnSortByVue.addEventListener("click", () => sort("vue"));
 
 function sort(tag) {
     projects.forEach((project) => {
@@ -28,25 +28,28 @@ projects.forEach((project, i) => {
 
 const projectsList = [
     {
-        title: "Проект 1",
-        description: "Описание проекта 1",
-        screenshots: ["../images/avatar.jpg", "../images/avatar.jpg"],
-        description: "Подробное описание проекта 1...",
+        title: "Визитка",
+        screenshots: ["../images/portfolio.png"],
+        description:
+            "Сайт-визитка, созданный для представления моих навыков и проектов. Этот сайт разработан с использованием HTML и CSS.",
+        source: "https://github.com/nekotyan2d/mirea-fibr-pr13-14",
         tags: ["html"],
     },
     {
-        title: "Проект 2",
-        description: "Описание проекта 2",
-        screenshots: ["../images/avatar.jpg", "../images/avatar.jpg"],
-        description: "Подробное описание проекта 2...",
-        tags: ["js"],
+        title: "Фронт DepthHunter",
+        screenshots: ["../images/depthhunter1.png", "../images/depthhunter2.png"],
+        description:
+            "Фронтенд мини-приложения в телеграм DepthHunter. Игра в стиле майнкрафт, но в 2д и в телеграме... Добывай ресурсы, строй и играй с друзьями! Проект написан с использованием Vue и Three.js",
+        source: "https://github.com/nekotyan2d/depthhunter",
+        tags: ["js", "vue"],
     },
     {
-        title: "Проект 3",
-        description: "Описание проекта 3",
-        screenshots: ["../images/avatar.jpg", "../images/avatar.jpg"],
-        description: "Подробное описание проекта 3...",
-        tags: ["react"],
+        title: "Priority TODO",
+        screenshots: ["../images/todo1.png", "../images/todo2.png", "../images/todo3.png"],
+        description:
+            "TODO с приоритезацией задач. Приложение позволяет создавать задачи с разными уровнями приоритета и отмечать выполненные. На главной всегда отображается самая приоритетная задача. Проект написан с использованием JavaScript и Vue.js",
+        source: "https://github.com/nekotyan2d/priority-todo",
+        tags: ["js", "vue"],
     },
 ];
 
@@ -64,6 +67,9 @@ function showProjectModal(id) {
         </div>
         <div class="project-modal__screenshots">
             ${screenshots}
+        </div>
+        <div class="project-modal__source">
+            <a href="${projectsList[id].source}" target="_blank">Исходный код</a>
         </div>
         <p class="project-modal__description">${projectsList[id].description}</p>
     `;
