@@ -172,15 +172,14 @@ main {
     flex-direction: column;
     gap: var(--gap);
 
-    .skill,
-    .course {
-        display: flex;
-        align-items: center;
+    .skills-container,
+    .courses-container {
+        display: grid;
         gap: var(--gap);
+        grid-template-columns: auto 1fr auto;
 
         .skill__progress,
         .course__progress {
-            flex: 1;
             height: 20px;
             background-color: var(--color-bg-secondary);
             border-radius: var(--border-radius);
@@ -195,6 +194,7 @@ main {
         .skill__percent,
         .course__percent {
             font-weight: bold;
+            text-align: right;
         }
     }
 }
@@ -357,8 +357,8 @@ main {
 
             .schedule__status {
                 border-radius: var(--border-radius);
-                width: 32px;
-                height: 32px;
+                min-width: 32px;
+                min-height: 32px;
                 background-repeat: no-repeat;
                 background-position: center;
             }
