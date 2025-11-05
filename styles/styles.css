@@ -7,8 +7,8 @@ body {
     font-family: "Inter", sans-serif;
     background-color: var(--color-bg);
     color: var(--color-text);
-    height: 100vh;
-    height: 100dvh;
+    min-height: 100vh;
+    min-height: 100dvh;
     display: flex;
     flex-direction: column;
 }
@@ -71,6 +71,21 @@ textarea {
     display: inline-block;
     width: 1em;
     height: 1em;
+}
+
+.skip-link {
+    position: absolute;
+    z-index: 99999;
+    inset-inline-start: var(--padding-normal);
+    inset-block-start: -100%;
+    background-color: var(--color-primary);
+    color: var(--color-header-bg);
+    text-decoration: none;
+
+    &:focus,
+    &:focus-visible {
+        inset-block-start: var(--padding-normal);
+    }
 }
 
 .header {
@@ -421,6 +436,15 @@ main {
     .header .header__nav .menu {
         flex-direction: column;
         gap: var(--gap-small);
+    }
+
+    .info {
+        flex-direction: column;
+        align-items: center;
+
+        .info__content {
+            align-items: center;
+        }
     }
 
     .projects .projects__header {
