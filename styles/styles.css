@@ -166,9 +166,11 @@ main {
     padding: var(--padding-normal);
 
     .info__photo {
-        border-radius: var(--border-radius);
-        width: 200px;
-        height: 200px;
+        border-radius: 50%;
+        inline-size: clamp(150px, 22vw, 200px);
+        block-size: auto;
+        object-fit: cover;
+        box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
     }
 
     .info__content {
