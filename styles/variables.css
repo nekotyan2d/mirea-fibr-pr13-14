@@ -1,8 +1,8 @@
 :root {
-    --color-primary: #6ee546;
-    --color-secondary: #4eb62b;
+    --color-primary: hsl(120, 89%, 45%);
+    --color-secondary: hsl(120, 89%, 40%);
 
-    --color-header-bg: #077e07;
+    --color-header-bg: hsl(120, 89%, 18%);
     --color-header-text: #ffffff;
 
     --color-btn-bg: #6ee546;
@@ -27,7 +27,7 @@
     --padding-large: 24px;
     --padding-small: 8px;
 
-    --gap: 1rem;
-    --gap-large: 2rem;
-    --gap-small: 0.5rem;
+    --gap: clamp(1rem, 1rem + 1vw, 1.5rem);
+    --gap-large: clamp(2rem, 1rem + 1vw, 2.5rem);
+    --gap-small: clamp(0.5rem, 0.5rem + 1vw, 1rem);
 }
