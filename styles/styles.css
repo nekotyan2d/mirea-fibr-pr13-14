@@ -7,8 +7,8 @@ body {
     font-family: "Inter", sans-serif;
     background-color: var(--color-bg);
     color: var(--color-text);
-    height: 100vh;
-    height: 100dvh;
+    min-height: 100vh;
+    min-height: 100dvh;
     display: flex;
     flex-direction: column;
 }
@@ -73,11 +73,28 @@ textarea {
     height: 1em;
 }
 
+.skip-link {
+    position: absolute;
+    z-index: 99999;
+    inset-inline-start: var(--padding-normal);
+    inset-block-start: -100%;
+    background-color: var(--color-primary);
+    color: var(--color-header-bg);
+    text-decoration: none;
+
+    &:focus,
+    &:focus-visible {
+        inset-block-start: var(--padding-normal);
+    }
+}
+
 .header {
     background-color: var(--color-header-bg);
     padding: var(--padding-small);
     color: var(--color-header-text);
     text-align: center;
+    position: sticky;
+    top: 0;
 
     .header__branding,
     .header__nav {
@@ -149,9 +166,11 @@ main {
     padding: var(--padding-normal);
 
     .info__photo {
-        border-radius: var(--border-radius);
-        width: 200px;
-        height: 200px;
+        border-radius: 50%;
+        inline-size: clamp(150px, 22vw, 200px);
+        block-size: auto;
+        object-fit: cover;
+        box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
     }
 
     .info__content {
@@ -421,6 +440,15 @@ main {
     .header .header__nav .menu {
         flex-direction: column;
         gap: var(--gap-small);
+    }
+
+    .info {
+        flex-direction: column;
+        align-items: center;
+
+        .info__content {
+            align-items: center;
+        }
     }
 
     .projects .projects__header {

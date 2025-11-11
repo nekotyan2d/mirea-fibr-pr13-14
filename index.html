@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Портфолио</title>
     <link rel="stylesheet" href="./styles/styles.css">
     <script src="./scripts/index.js" defer></script>
@@ -27,9 +27,22 @@
             </ul>
         </nav>
     </header>
-    <main>
+    <a href="#main" class="skip-link">Перейти к основному содержимому</a>
+    <main id="main">
         <section class="info">
-            <img class="info__photo" src="./images/avatar.jpg" alt="Фото">
+            <picture>
+                <source type="image/avif"
+                    srcset="./images/hero-150.avif 150w, ./images/hero-200.avif 200w, ./images/hero-300.avif 300w"
+                    alt="Фото"
+                    sizes="(200px < width <= 300px) 300px, (150px < width <= 200px) 200px, (width <= 150px) 150px">
+                <source type="image/webp"
+                    srcset="./images/hero-150.webp 150w, ./images/hero-200.webp 200w, ./images/hero-300.webp 300w"
+                    alt="Фото"
+                    sizes="(200px < width <= 300px) 300px, (150px < width <= 200px) 200px, (width <= 150px) 150px">
+                <img class="info__photo"
+                    srcset="./images/depthhunter1.png 150w, ./images/depthhunter2.png 200w, ./images/hero-300.jpg 300w"
+                    alt="Фото" fetchpriority="high" width="300" height="300">
+            </picture>
             <div class="info__content">
                 <p class="info__description">Привет! Я студент группы ЭФБО-05-24. Увлекаюсь веб-разработкой</p>
                 <button class="info__resume">Скачать резюме</button>
