@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Портфолио</title>
+    <title>Дневник | Портфолио</title>
+    <meta name="description" content="Тестовое задание - портфолио студента">
     <link rel="stylesheet" href="../styles/styles.css">
 </head>
 
@@ -15,45 +16,45 @@
             <h2 class="name">Рычажков Дмитрий Андреевич</h2>
         </div>
 
-        <nav class="header__nav">
+        <nav class="header__nav" aria-label="Основная навигация">
             <ul class="menu">
                 <li class="menu__item">
                     <a href="../index.html" class="menu__link">Главная</a>
                 </li>
                 <li class="menu__item"><a href="./projects.html" class="menu__link">Проекты</a></li>
-                <li class="menu__item"><a href="./diary.html" class="menu__link">Дневник</a></li>
+                <li class="menu__item"><a href="./diary.html" class="menu__link" aria-current="page">Дневник</a></li>
                 <li class="menu__item"><a href="./contacts.html" class="menu__link">Контакты</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <section class="my-progress">
-            <h2>Мой учебный прогресс</h2>
-            <div class="schedule">
-                <div class="schedule__item schedule__item--completed">
+        <section class="my-progress" aria-labelledby="my-progress-heading">
+            <h2 id="my-progress-heading">Мой учебный прогресс</h2>
+            <div class="schedule" role="list">
+                <div class="schedule__item schedule__item--completed" role="listitem">
                     <div class="schedule__date">4 сен</div>-
                     <div class="schedule__name">Верстка макета сайта</div>
                     <div class="schedule__status"></div>
                 </div>
-                <div class="schedule__item schedule__item--completed">
+                <div class="schedule__item schedule__item--completed" role="listitem">
                     <div class="schedule__date">30 сен</div>-
                     <div class="schedule__name">Основы JS</div>
                     <div class="schedule__status"></div>
                 </div>
-                <div class="schedule__item schedule__item--in-progress">
+                <div class="schedule__item schedule__item--in-progress" role="listitem">
                     <div class="schedule__date">4 окт</div>-
                     <div class="schedule__name">Основы Go</div>
                     <div class="schedule__status"></div>
                 </div>
-                <div class="schedule__item schedule__item--in-progress">
+                <div class="schedule__item schedule__item--in-progress" role="listitem">
                     <div class="schedule__date">9 окт</div>-
                     <div class="schedule__name">Работа с DOM в JS</div>
                     <div class="schedule__status"></div>
                 </div>
             </div>
         </section>
-        <section class="courses">
-            <h2>Текущие курсы</h2>
+        <section class="courses" aria-labelledby="courses-heading">
+            <h2 id="courses-heading">Текущие курсы</h2>
             <div class="courses-container">
                 <span class="course__name">Верстка</span>
                 <div class="course__progress">

@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Портфолио</title>
+    <title>Контакты | Портфолио</title>
+    <meta name="description" content="Тестовое задание - портфолио студента">
     <link rel="stylesheet" href="../styles/styles.css">
     <script src="../scripts/contacts.js" defer></script>
 </head>
@@ -16,7 +17,7 @@
             <h2 class="name">Рычажков Дмитрий Андреевич</h2>
         </div>
 
-        <nav class="header__nav">
+        <nav class="header__nav" aria-label="Основная навигация">
             <ul class="menu">
                 <li class="menu__item">
                     <a href="../index.html" class="menu__link">Главная</a>
@@ -28,30 +29,37 @@
         </nav>
     </header>
     <main>
-        <section class="contact-me">
-            <h2>Свяжитесь со мной</h2>
+        <section class="contact-me" aria-labelledby="contact-me-heading">
+            <h2 id="contact-me-heading">Свяжитесь со мной</h2>
             <form class="contact-form">
-                <label for="name">Имя:</label>
-                <input type="text" id="name" name="name" required>
+                <fieldset class="contact-form">
+                    <legend>Обратная связь</legend>
+                    <label for="name">Имя:</label>
+                    <input type="text" id="name" name="name" placeholder="Имя" aria-required="true" required>
 
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Email" aria-required="true" required>
 
-                <label for="message">Сообщение:</label>
-                <textarea id="message" name="message" required></textarea>
+                    <label for="message">Сообщение:</label>
+                    <textarea id="message" name="message" placeholder="Сообщение" aria-required="true"
+                        required></textarea>
 
-                <button type="submit">Отправить сообщение</button>
+                    <button type="submit" role="button">Отправить сообщение</button>
+                </fieldset>
+
             </form>
         </section>
-        <section class="contacts">
-            <h2>Контакты</h2>
+        <section class="contacts" aria-labelledby="contacts-heading">
+            <h2 id="contacts-heading">Контакты</h2>
             <ul class="contact-info">
-                <li class="contact-info__item"><img class="icon" src="../images/icons/email.svg" alt="">
+                <li class="contact-info__item" tabindex="0"><img class="icon" src="../images/icons/email.svg" alt="">
                     rychazhkov.d.a@edu.mirea.ru</li>
-                <li class="contact-info__item"><img class="icon" src="../images/icons/github.svg" alt="">GitHub:
+                <li class="contact-info__item" tabindex="0"><img class="icon" src="../images/icons/github.svg"
+                        alt="">GitHub:
                     nekotyan2d
                 </li>
-                <li class="contact-info__item"><img class="icon" src="../images/icons/location.svg" alt="">Москва,
+                <li class="contact-info__item" tabindex="0"><img class="icon" src="../images/icons/location.svg"
+                        alt="">Москва,
                     Россия</li>
             </ul>
         </section>

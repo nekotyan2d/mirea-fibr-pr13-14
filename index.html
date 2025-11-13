@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>Портфолио</title>
+    <title>Главная | Портфолио</title>
+    <meta name="description" content="Тестовое задание - портфолио студента">
     <link rel="stylesheet" href="./styles/styles.css">
     <script src="./scripts/index.js" defer></script>
 </head>
@@ -16,10 +17,10 @@
             <h2 class="name">Рычажков Дмитрий Андреевич</h2>
         </div>
 
-        <nav class="header__nav">
+        <nav class="header__nav" aria-label="Основная навигация">
             <ul class="menu">
                 <li class="menu__item">
-                    <a href="./index.html" class="menu__link">Главная</a>
+                    <a href="./index.html" class="menu__link" aria-current="page">Главная</a>
                 </li>
                 <li class="menu__item"><a href="./pages/projects.html" class="menu__link">Проекты</a></li>
                 <li class="menu__item"><a href="./pages/diary.html" class="menu__link">Дневник</a></li>
@@ -31,25 +32,24 @@
     <main id="main">
         <section class="info">
             <picture>
-                <source type="image/avif"
-                    srcset="./images/hero-150.avif 150w, ./images/hero-200.avif 200w, ./images/hero-300.avif 300w"
-                    alt="Фото"
-                    sizes="(200px < width <= 300px) 300px, (150px < width <= 200px) 200px, (width <= 150px) 150px">
-                <source type="image/webp"
-                    srcset="./images/hero-150.webp 150w, ./images/hero-200.webp 200w, ./images/hero-300.webp 300w"
-                    alt="Фото"
-                    sizes="(200px < width <= 300px) 300px, (150px < width <= 200px) 200px, (width <= 150px) 150px">
-                <img class="info__photo"
-                    srcset="./images/hero-150.jpg 150w, ./images/hero-200.jpg 200w, ./images/hero-300.jpg 300w"
-                    alt="Фото" fetchpriority="high" width="300" height="300">
+                <source type="image/avif" srcset="./images/hero-300.avif" media="(min-width: 900px)">
+                <source type="image/avif" srcset="./images/hero-200.avif" media="(min-width: 401px)">
+                <source type="image/avif" srcset="./images/hero-150.avif" media="(max-width: 400px)">
+
+                <source type="image/webp" srcset="./images/hero-300.webp" media="(min-width: 900px)">
+                <source type="image/webp" srcset="./images/hero-200.webp" media="(min-width: 401px)">
+                <source type="image/webp" srcset="./images/hero-150.webp" media="(max-width: 400px)">
+
+                <img class="info__photo" srcset="./images/hero-150.jpg" alt="Фото" fetchpriority="high" width="300"
+                    height="300">
             </picture>
             <div class="info__content">
                 <p class="info__description">Привет! Я студент группы ЭФБО-05-24. Увлекаюсь веб-разработкой</p>
-                <button class="info__resume">Скачать резюме</button>
+                <button class="info__resume" aria-label="Скачать резюме" role="button">Скачать резюме</button>
             </div>
         </section>
-        <section class="skills">
-            <h2>Мои навыки</h2>
+        <section class="skills" aria-labelledby="skills-heading">
+            <h2 id="skills-heading">Мои навыки</h2>
             <div class="skills-container">
                 <span class="skill__name">HTML/CSS</span>
                 <div class="skill__progress">
@@ -73,22 +73,32 @@
                 <div class="skill__percent">10%</div>
             </div>
         </section>
-        <section class="projects">
-            <h2>Лучшие проекты</h2>
+        <section class="projects" aria-labelledby="projects-heading">
+            <h2 id="projects-heading">Лучшие проекты</h2>
             <div class="projects__cards">
                 <article class="project-card">
-                    <img class="project-card__image" src="./images/portfolio.png" alt="Визитка">
+                    <picture>
+                        <source srcset="./images/portfolio.png" type="image/png" media="(min-width: 1200px)">
+                        <img class="project-card__image" src="./images/portfolio.png" alt="Визитка" loading="lazy">
+                    </picture>
                     <h3 class="project-card__title">Визитка</h3>
                     <p class="project-card__description">Личная визитка. Этот сайт</p>
                 </article>
                 <article class="project-card">
-                    <img class="project-card__image" src="./images/depthhunter2.png" alt="DepthHunter">
+                    <picture>
+                        <source srcset="./images/depthhunter2.png" type="image/png" media="(min-width: 1200px)">
+                        <img class="project-card__image" src="./images/depthhunter2.png" alt="DepthHunter"
+                            loading="lazy">
+                    </picture>
                     <h3 class="project-card__title">Фронт DepthHunter</h3>
                     <p class="project-card__description">Фронтенд мини-приложения в телеграм DepthHunter. Игра в стиле
                         майнкрафт, но в 2д и в телеграме</p>
                 </article>
                 <article class="project-card">
-                    <img class="project-card__image" src="./images/todo1.png" alt="Priority TODO">
+                    <picture>
+                        <source srcset="./images/todo1.png" type="image/png" media="(min-width: 1200px)">
+                        <img class="project-card__image" src="./images/todo1.png" alt="Priority TODO" loading="lazy">
+                    </picture>
                     <h3 class="project-card__title">Priority TODO</h3>
                     <p class="project-card__description">TODO с приоритезацией задач</p>
                 </article>
