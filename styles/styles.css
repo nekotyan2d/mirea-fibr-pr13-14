@@ -260,6 +260,17 @@ main {
             gap: var(--gap);
             overflow-x: auto;
         }
+
+        .filter-status {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            margin: -1px;
+            padding: 0;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            border: 0;
+        }
     }
 
     .projects__cards {
@@ -434,12 +445,23 @@ main {
     gap: var(--gap);
 
     .contact-form {
-        display: flex;
-        flex-direction: column;
-        gap: var(--gap-small);
-        background-color: var(--color-box);
-        padding: var(--padding-normal) var(--padding-large);
-        border-radius: var(--border-radius);
+        legend {
+            font-size: 1.5rem;
+            font-weight: bold;
+            background-color: var(--color-bg-secondary);
+            padding: var(--padding-small) var(--padding-normal);
+            border-radius: var(--border-radius) var(--border-radius) 0 0;
+        }
+
+        fieldset {
+            display: flex;
+            flex-direction: column;
+            gap: var(--gap-small);
+            background-color: var(--color-box);
+            padding: var(--padding-normal) var(--padding-large);
+            border-radius: var(--border-radius);
+            border: none;
+        }
     }
 }
 /* секция моих контактов */

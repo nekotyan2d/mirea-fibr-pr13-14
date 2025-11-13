@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
@@ -16,10 +16,10 @@
             <h2 class="name">Рычажков Дмитрий Андреевич</h2>
         </div>
 
-        <nav class="header__nav">
+        <nav class="header__nav" aria-label="Основная навигация">
             <ul class="menu">
                 <li class="menu__item">
-                    <a href="./index.html" class="menu__link">Главная</a>
+                    <a href="./index.html" class="menu__link" aria-current="page">Главная</a>
                 </li>
                 <li class="menu__item"><a href="./pages/projects.html" class="menu__link">Проекты</a></li>
                 <li class="menu__item"><a href="./pages/diary.html" class="menu__link">Дневник</a></li>
@@ -44,11 +44,11 @@
             </picture>
             <div class="info__content">
                 <p class="info__description">Привет! Я студент группы ЭФБО-05-24. Увлекаюсь веб-разработкой</p>
-                <button class="info__resume">Скачать резюме</button>
+                <button class="info__resume" aria-label="Скачать резюме" role="button">Скачать резюме</button>
             </div>
         </section>
-        <section class="skills">
-            <h2>Мои навыки</h2>
+        <section class="skills" aria-labelledby="skills-heading">
+            <h2 id="skills-heading">Мои навыки</h2>
             <div class="skills-container">
                 <span class="skill__name">HTML/CSS</span>
                 <div class="skill__progress">
@@ -72,8 +72,8 @@
                 <div class="skill__percent">10%</div>
             </div>
         </section>
-        <section class="projects">
-            <h2>Лучшие проекты</h2>
+        <section class="projects" aria-labelledby="projects-heading">
+            <h2 id="projects-heading">Лучшие проекты</h2>
             <div class="projects__cards">
                 <article class="project-card">
                     <picture>

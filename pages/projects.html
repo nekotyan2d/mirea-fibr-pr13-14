@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
@@ -16,31 +16,32 @@
             <h2 class="name">Рычажков Дмитрий Андреевич</h2>
         </div>
 
-        <nav class="header__nav">
+        <nav class="header__nav" aria-label="Основная навигация">
             <ul class="menu">
                 <li class="menu__item">
                     <a href="../index.html" class="menu__link">Главная</a>
                 </li>
-                <li class="menu__item"><a href="./projects.html" class="menu__link">Проекты</a></li>
+                <li class="menu__item"><a href="./projects.html" class="menu__link" aria-current="page">Проекты</a></li>
                 <li class="menu__item"><a href="./diary.html" class="menu__link">Дневник</a></li>
                 <li class="menu__item"><a href="./contacts.html" class="menu__link">Контакты</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <section class="projects">
+        <section class="projects" aria-labelledby="projects-heading">
             <header class="projects__header">
-                <h2 class="header__title">Лучшие проекты</h2>
-                <div class="sorting">
-                    <button class="sorting__btn" id="btnSortByAll">Все</button>
-                    <button class="sorting__btn" id="btnSortByHtml">HTML</button>
-                    <button class="sorting__btn" id="btnSortByJs">JS</button>
-                    <button class="sorting__btn" id="btnSortByVue">Vue</button>
+                <h2 class="header__title" id="projects-heading">Лучшие проекты</h2>
+                <div class="sorting" role="group" aria-label="Фильтр проектов">
+                    <button class="sorting__btn" id="btnSortByAll" aria-pressed="true" role="button">Все</button>
+                    <button class="sorting__btn" id="btnSortByHtml" aria-pressed="false" role="button">HTML</button>
+                    <button class="sorting__btn" id="btnSortByJs" aria-pressed="false" role="button">JS</button>
+                    <button class="sorting__btn" id="btnSortByVue" aria-pressed="false" role="button">Vue</button>
                 </div>
+                <div id="filter-status" aria-live="polite" class="filter-status"></div>
             </header>
 
-            <div class="projects__cards">
-                <article class="project-card" data-tag="html">
+            <div class="projects__cards" role="list">
+                <article class="project-card" data-tag="html" role="listitem" tabindex="0">
                     <picture>
                         <source srcset="../images/portfolio.png" type="image/png" media="(min-width: 1200px)">
                         <img class="project-card__image" src="../images/portfolio-small.png" alt="Визитка"
@@ -49,7 +50,7 @@
                     <h3 class="project-card__title">Визитка</h3>
                     <p class="project-card__description">Личная визитка. Этот сайт</p>
                 </article>
-                <article class="project-card" data-tag="js">
+                <article class="project-card" data-tag="js" role="listitem" tabindex="0">
                     <picture>
                         <source srcset="../images/depthhunter2.png" type="image/png" media="(min-width: 1200px)">
                         <img class="project-card__image" src="../images/depthhunter2-small.png" alt="DepthHunter"
@@ -59,7 +60,7 @@
                     <p class="project-card__description">Фронтенд мини-приложения в телеграм DepthHunter. Игра в стиле
                         майнкрафт, но в 2д и в телеграме</p>
                 </article>
-                <article class="project-card" data-tag="vue">
+                <article class="project-card" data-tag="vue" role="listitem" tabindex="0">
                     <picture>
                         <source srcset="../images/todo1.png" type="image/png" media="(min-width: 1200px)">
                         <img class="project-card__image" src="../images/todo1.png" alt="Priority TODO" loading="lazy">
