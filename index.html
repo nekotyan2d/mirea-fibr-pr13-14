@@ -76,18 +76,28 @@
             <h2>Лучшие проекты</h2>
             <div class="projects__cards">
                 <article class="project-card">
-                    <img class="project-card__image" src="./images/portfolio.png" alt="Визитка">
+                    <picture>
+                        <source srcset="./images/portfolio.png" type="image/png" media="(min-width: 1200px)">
+                        <img class="project-card__image" src="./images/portfolio.png" alt="Визитка" loading="lazy">
+                    </picture>
                     <h3 class="project-card__title">Визитка</h3>
                     <p class="project-card__description">Личная визитка. Этот сайт</p>
                 </article>
                 <article class="project-card">
-                    <img class="project-card__image" src="./images/depthhunter2.png" alt="DepthHunter">
+                    <picture>
+                        <source srcset="./images/depthhunter2.png" type="image/png" media="(min-width: 1200px)">
+                        <img class="project-card__image" src="./images/depthhunter2.png" alt="DepthHunter"
+                            loading="lazy">
+                    </picture>
                     <h3 class="project-card__title">Фронт DepthHunter</h3>
                     <p class="project-card__description">Фронтенд мини-приложения в телеграм DepthHunter. Игра в стиле
                         майнкрафт, но в 2д и в телеграме</p>
                 </article>
                 <article class="project-card">
-                    <img class="project-card__image" src="./images/todo1.png" alt="Priority TODO">
+                    <picture>
+                        <source srcset="./images/todo1.png" type="image/png" media="(min-width: 1200px)">
+                        <img class="project-card__image" src="./images/todo1.png" alt="Priority TODO" loading="lazy">
+                    </picture>
                     <h3 class="project-card__title">Priority TODO</h3>
                     <p class="project-card__description">TODO с приоритезацией задач</p>
                 </article>
